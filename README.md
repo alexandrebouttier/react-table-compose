@@ -54,3 +54,28 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
         ]}
       />
 ```
+#### Basic parameters
+
+```javascript
+<ReactTableCompose
+        datas={depositsMoney}
+        // données 
+        nameEntities='dépot'
+        // nom de l'entité 
+        fields={[
+          {
+            name: 'Id',
+            field: 'date',
+            type: 'date',
+            dateFormat: 'LL',
+          },
+          {
+            name: 'Crypto',
+            field: 'currency',
+            type: 'text',
+          },
+        // Champs à afficher
+        ]}
+      />
+/>
+```
