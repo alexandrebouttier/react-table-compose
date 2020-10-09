@@ -80,7 +80,7 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
 />
 ```
 
-#### Fiels Types/Options
+#### Fields Types/Options
 | Type  | Options |
 | ------------- | ------------- |
 | date  | dateFormat  |
