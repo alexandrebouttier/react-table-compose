@@ -31,5 +31,8 @@
     "moment": "^2.29.1",
     "react": "^16.13.1",
     "reactstrap": "^8.6.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-export-default-from": "^7.10.4"
   }
 }
