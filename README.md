@@ -81,7 +81,9 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
 ```
 
 #### Fiels Types/Options
-| First Header  | Second Header |
+| Type  | Options |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Date  | dateFormat  |
+| text  |  upperFirst |
+| price  | toFixed   |
+| price  |   |
