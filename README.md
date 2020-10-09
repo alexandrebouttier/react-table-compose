@@ -2,6 +2,10 @@
 
 
 # React Table Compose
-[![Version](https://img.shields.io/npm/v/react-table-compose.svg)](https://www.npmjs.com/package/react-table-compose)
 
-## Try it out
+
+## Installation
+
+```
+$ yarn add https://github.com/alexandrebouttier/react-table-compose.git
+```
