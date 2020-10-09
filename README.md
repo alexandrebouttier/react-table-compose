@@ -86,4 +86,4 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
 | date  | dateFormat  |
 | text  |  upperFirst |
 | price  | toFixed   |
-| price  |   |
+
