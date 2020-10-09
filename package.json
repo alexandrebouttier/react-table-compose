@@ -1,0 +1,34 @@
+{
+  "name": "react-table-compose",
+  "version": "0.0.1",
+  "description": "React Table Crud Bootstrap",
+  "main": "/src/components/index.js",
+  "module": "/src/components/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/alexandrebouttier/react-table-compose.git"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md",
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "table",
+    "bootstrap",
+    "react",
+    "component",
+    "components",
+    "react-component",
+    "ui"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "reactstrap": "^8.6.0"
+  }
+}

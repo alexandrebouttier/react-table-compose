@@ -1,0 +1,1 @@
+export ReactTableCompose from './ReactTableCompose';
