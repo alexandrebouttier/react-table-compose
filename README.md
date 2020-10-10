@@ -1,89 +1,30 @@
----
+# react-table-compose
 
+> Made with create-react-library
 
-# React Table Compose
+[![NPM](https://img.shields.io/npm/v/react-table-compose.svg)](https://www.npmjs.com/package/react-table-compose) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## Install
 
-## Installation
-
+```bash
+npm install --save react-table-compose
 ```
-$ yarn add https://github.com/alexandrebouttier/react-table-compose.git
-```
+
 ## Usage
 
-`import {ReactTableCompose} from 'react-table-compose';`
+```jsx
+import React, { Component } from 'react'
 
+import MyComponent from 'react-table-compose'
+import 'react-table-compose/dist/index.css'
 
-```javascript
-
- <ReactTableCompose
-        datas={depositsMoney}
-        nameEntities='dépot'
-        fields={[
-          {
-            name: 'Id',
-            field: 'date',
-            type: 'date',
-            dateFormat: 'LL',
-          },
-          {
-            name: 'Crypto',
-            field: 'currency',
-            type: 'text',
-          },
-          {
-            name: 'Quantité',
-            field: 'quantity',
-            type: 'number',
-          },
-          {
-            name: 'Frais',
-            field: 'fee',
-            type: 'number',
-          },
-          {
-            name: 'Prix/Crypto',
-            field: 'priceCoin',
-            type: 'number',
-          },
-          {
-            name: 'Total',
-            field: 'priceTotal',
-            type: 'number',
-          },
-        ]}
-      />
-```
-#### Basic parameters
-
-```javascript
-<ReactTableCompose
-        datas={depositsMoney}
-        // données 
-        nameEntities='dépot'
-        // nom de l'entité 
-        fields={[
-          {
-            name: 'Id',
-            field: 'date',
-            type: 'date',
-            dateFormat: 'LL',
-          },
-          {
-            name: 'Crypto',
-            field: 'currency',
-            type: 'text',
-          },
-        // Champs à afficher
-        ]}
-      />
-/>
+class Example extends Component {
+  render() {
+    return <MyComponent />
+  }
+}
 ```
 
-#### Fields Types/Options
-| Type  | Options |
-| ------------- | ------------- |
-| date  | dateFormat  |
-| text  |  upperFirst |
-| price  | toFixed   |
+## License
 
+MIT © [](https://github.com/)
