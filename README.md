@@ -140,4 +140,87 @@ info
 light
 dark 
 
+#### Exemple
 
+
+
+
+
+```javascript
+
+
+export const ordersTypes = {
+  market: 'Au marché',
+  limit: 'Limite',
+  take_profit_limit: 'Take profit limite',
+};
+
+  <ReactTableCompose
+          dataset={ordersData}
+          nameEntities='order'
+          fields={[
+            {
+              name: 'Order id',
+              field: 'id',
+              type: 'number',
+            },
+            {
+              name: 'Date',
+              field: 'datetime',
+              type: 'date',
+              options: {
+                dateFormat: 'll',
+              },
+            },
+            {
+              name: 'Achat/Vente',
+              field: 'side',
+              type: 'badge',
+              options: {
+                badge: {
+                  success: 'buy',
+                  danger: 'sell',
+                },
+              },
+            },
+            {
+              name: 'Type',
+              field: 'type',
+              type: 'text',
+              options: {
+                transformValue: ordersTypes,
+              },
+            },
+            {
+              name: 'Symbol',
+              field: 'symbol',
+              type: 'text',
+              options: {
+                upperCase: true,
+              },
+            },
+            {
+              name: 'Quantité',
+              field: 'quantity',
+              type: 'number',
+            },
+            {
+              name: 'Prix',
+              field: 'price',
+              type: 'price',
+              options: {
+                currency: '$',
+                decimal: 2,
+              },
+            },
+            {
+              name: 'Statut',
+              field: 'status',
+              type: 'text',
+              options: {
+                transformValue: ordersStatus,
+              },
+            },
+          ]}
+        />
+```      
