@@ -153,6 +153,12 @@ export const ordersTypes = {
   take_profit_limit: 'Take profit limite',
 };
 
+export const ordersStatus = {
+  closed: 'Fermer',
+  canceled: 'Annuler',
+  open: 'Ouvert',
+};
+
   <ReactTableCompose
           dataset={ordersData}
           nameEntities='order'
