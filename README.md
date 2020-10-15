@@ -98,4 +98,9 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
 | upperFirst  |  boolean |
 | transformValue  |  array |
 
+#### FieldDate
+|  options |type|
+| ------------- | ------------- |
+| dateFormat  |  string ("LT","LTS","L","l","LL","ll","LLL","lll","LLLL","llll") |
+
 
