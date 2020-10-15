@@ -103,4 +103,9 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
 | ------------- | ------------- |
 | dateFormat  |  string ("LT","LTS","L","l","LL","ll","LLL","lll","LLLL","llll") |
 
+#### FieldNumber
+|  options |type|
+| ------------- | ------------- |
+| decimal  |  number ("1,2,3,4,5,6") |
+
 
