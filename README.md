@@ -89,11 +89,13 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
       />
 />
 ```
+## Fields disponible
 
-#### Fields Types/Options
-| Type  | Options |
+#### FieldText
+|  options |type|
 | ------------- | ------------- |
-| date  | dateFormat  |
-| text  |  upperFirst |
-| price  | toFixed   |
+| upperCase  |  boolean |
+| upperFirst  |  boolean |
+| transformValue  |  array |
+
 
