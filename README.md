@@ -1,30 +1,89 @@
-# react-table-compose
+---
 
-> Made with create-react-library
 
-[![NPM](https://img.shields.io/npm/v/react-table-compose.svg)](https://www.npmjs.com/package/react-table-compose) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+# React Table Compose
 
-## Install
 
-```bash
-npm install --save react-table-compose
+## Installation
+
 ```
-
+$ yarn add https://github.com/alexandrebouttier/react-table-compose.git
+```
 ## Usage
 
-```jsx
-import React, { Component } from 'react'
+`import {ReactTableCompose} from 'react-table-compose';`
 
-import MyComponent from 'react-table-compose'
-import 'react-table-compose/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+```javascript
+
+ <ReactTableCompose
+        datas={depositsMoney}
+        nameEntities='dépot'
+        fields={[
+          {
+            name: 'Id',
+            field: 'date',
+            type: 'date',
+            dateFormat: 'LL',
+          },
+          {
+            name: 'Crypto',
+            field: 'currency',
+            type: 'text',
+          },
+          {
+            name: 'Quantité',
+            field: 'quantity',
+            type: 'number',
+          },
+          {
+            name: 'Frais',
+            field: 'fee',
+            type: 'number',
+          },
+          {
+            name: 'Prix/Crypto',
+            field: 'priceCoin',
+            type: 'number',
+          },
+          {
+            name: 'Total',
+            field: 'priceTotal',
+            type: 'number',
+          },
+        ]}
+      />
+```
+#### Basic parameters
+
+```javascript
+<ReactTableCompose
+        datas={depositsMoney}
+        // données 
+        nameEntities='dépot'
+        // nom de l'entité 
+        fields={[
+          {
+            name: 'Id',
+            field: 'date',
+            type: 'date',
+            dateFormat: 'LL',
+          },
+          {
+            name: 'Crypto',
+            field: 'currency',
+            type: 'text',
+          },
+        // Champs à afficher
+        ]}
+      />
+/>
 ```
 
-## License
+#### Fields Types/Options
+| Type  | Options |
+| ------------- | ------------- |
+| date  | dateFormat  |
+| text  |  upperFirst |
+| price  | toFixed   |
 
-MIT © [](https://github.com/)
