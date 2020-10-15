@@ -140,11 +140,8 @@ info
 light
 dark 
 
-#### Exemple
 
-
-
-
+## Exemple
 
 ```javascript
 
