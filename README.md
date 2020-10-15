@@ -108,4 +108,10 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
 | ------------- | ------------- |
 | decimal  |  number ("1,2,3,4,5,6") |
 
+#### FieldPrice
+|  options |type|
+| ------------- | ------------- |
+| decimal  |  number ("1,2,3,4,5,6") |
+| currency  |  string ("symbol currency") |
+
 
