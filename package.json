@@ -1,10 +1,10 @@
 {
   "name": "react-table-compose",
   "version": "1.0.0",
-  "description": "Made with create-react-library",
+  "description": "Table bootstrap composer",
   "author": "",
   "license": "MIT",
-  "repository": "/react-table-compose",
+  "repository": "https://github.com/alexandrebouttier/react-table-compose",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
