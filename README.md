@@ -114,4 +114,28 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
 | decimal  |  number ("1,2,3,4,5,6") |
 | currency  |  string ("symbol currency") |
 
+#### FieldBadge
+
+
+```javascript
+badge: {
+   success: 'buy', // color => value
+   danger: 'sell',
+   },
+```                
+|  options |type|
+| ------------- | ------------- |
+| badge  |  object |
+
+badges dispo :
+
+primary 
+secondary
+success 
+danger 
+warning
+info 
+light
+dark 
+
 
