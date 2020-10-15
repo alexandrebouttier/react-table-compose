@@ -20,8 +20,8 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
         dataset={depositsMoney}
         nameEntities='dépot'
         deleteMethod={deleteDepotMoney}
-        /// Si deleteMethod à une fonction de suppresion ,
-        une modal de suppression ainsi qu'un bouton sera automatiquement créer 
+        // Si deleteMethod à une fonction de suppresion ,
+        // une modal de suppression ainsi qu'un bouton sera automatiquement créer 
         fields={[
           {
             name: 'Date',
