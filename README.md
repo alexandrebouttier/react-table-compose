@@ -16,20 +16,26 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
 
 ```javascript
 
- <ReactTableCompose
-        datas={depositsMoney}
+   <ReactTableCompose
+        dataset={depositsMoney}
         nameEntities='dépot'
+        deleteMethod={deleteDepotMoney}
         fields={[
           {
-            name: 'Id',
+            name: 'Date',
             field: 'date',
             type: 'date',
-            dateFormat: 'LL',
+            options: {
+              dateFormat: 'll',
+            },
           },
           {
             name: 'Crypto',
             field: 'currency',
             type: 'text',
+            options: {
+              upperCase: true,
+            },
           },
           {
             name: 'Quantité',
@@ -49,7 +55,11 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
           {
             name: 'Total',
             field: 'priceTotal',
-            type: 'number',
+            type: 'price',
+            options: {
+              currency: '€',
+              decimal: 2,
+            },
           },
         ]}
       />
