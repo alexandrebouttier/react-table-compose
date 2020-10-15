@@ -2,7 +2,7 @@
   "name": "react-table-compose",
   "version": "1.0.0",
   "description": "Table bootstrap composer",
-  "author": "",
+  "author": "Alexandre Bouttier",
   "license": "MIT",
   "repository": "https://github.com/alexandrebouttier/react-table-compose",
   "main": "dist/index.js",
