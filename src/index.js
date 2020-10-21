@@ -77,7 +77,7 @@ const ReactTableCompose = ({ nameEntities, deleteMethod, dataset, fields }) => {
             {dataset ? (
               dataset.map((data, row) => {
                 return (
-                  <tr key={data.id}>
+                  <tr key={data._id}>
                     {fields &&
                       fields.map((field, i) => {
                         return switchField(
