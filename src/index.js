@@ -92,7 +92,7 @@ const ReactTableCompose = ({ nameEntities, deleteMethod, dataset, fields }) => {
                     {deleteMethod && (
                       <td>
                         <DeleteModal
-                          dataId={data.id}
+                          dataId={data._id}
                           deleteMethod={deleteMethod}
                           nameEntities={nameEntities}
                         />
