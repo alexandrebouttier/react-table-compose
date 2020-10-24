@@ -19,6 +19,7 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
    <ReactTableCompose
         dataset={depositsMoney}
         nameEntities='dépot'
+        idCollection="depot_id"
         deleteMethod={deleteDepotMoney}
         // Si deleteMethod à une fonction de suppresion ,
         // une modal de suppression ainsi qu'un bouton sera automatiquement créer 
