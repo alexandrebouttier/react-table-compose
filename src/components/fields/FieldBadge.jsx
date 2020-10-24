@@ -43,7 +43,9 @@ const FieldBadge = ({ options, field, data, index }) => {
     }
   };
 
-  return <td key={index}>{renderField(data[field], options)}</td>;
+  return (
+    <td key={`field-badge${index}`}>{renderField(data[field], options)}</td>
+  );
 };
 
 export default FieldBadge;

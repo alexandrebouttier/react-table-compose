@@ -1,8 +1,9 @@
 import React from 'react';
+import { isNaN } from 'lodash';
 
 const FieldPrice = ({ options, field, data, index }) => {
   const renderField = (options) => {
-    if (options && options.decimal) {
+    if (!isNaN(data[field]) && options && options.decimal) {
       switch (options.decimal) {
         case 1:
           return Number(data[field]).toFixed(1);
@@ -24,7 +25,7 @@ const FieldPrice = ({ options, field, data, index }) => {
   };
 
   return (
-    <td key={index}>
+    <td key={`field-price${index}`}>
       {renderField(options)}
       {options && options.currency && options.currency}
     </td>

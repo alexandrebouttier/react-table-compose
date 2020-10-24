@@ -18,7 +18,7 @@ const FieldText = ({ options, field, data, index }) => {
     }
   };
 
-  return <td key={index}>{renderField(options)}</td>;
+  return <td key={`field-badge${index}`}>{renderField(options)}</td>;
 };
 
 export default FieldText;

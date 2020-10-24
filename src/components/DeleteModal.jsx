@@ -6,6 +6,7 @@ const DeleteModal = ({ nameEntities, dataId, deleteMethod }) => {
   const toggleModalDelete = () => setShowModalDelete(!showModalDelete);
 
   const deleteRow = (depotId) => {
+    console.log('depot ID', depotId);
     return deleteMethod(depotId).then((res) => toggleModalDelete());
   };
 

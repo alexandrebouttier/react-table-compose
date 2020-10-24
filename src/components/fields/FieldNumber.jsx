@@ -1,6 +1,6 @@
 import React from 'react';
-
 import { isNaN } from 'lodash';
+
 const FieldNumber = ({ options, field, data, index }) => {
   const renderField = (options) => {
     if (!isNaN(data[field]) && options && options.decimal) {
@@ -24,7 +24,7 @@ const FieldNumber = ({ options, field, data, index }) => {
     }
   };
 
-  return <td key={index}>{renderField(options)}</td>;
+  return <td key={`field-number${index}`}>{renderField(options)}</td>;
 };
 
 export default FieldNumber;

@@ -32,11 +32,11 @@ const FieldDate = ({ options, field, data, index }) => {
         default:
       }
     } else {
-      return moment(data[field]).format();
+      return data[field] && moment(data[field]).format();
     }
   };
 
-  return <td key={index}>{renderField(options)}</td>;
+  return <td key={`field-date${index}`}>{renderField(options)}</td>;
 };
 
 export default FieldDate;

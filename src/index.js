@@ -1,15 +1,21 @@
-import React from 'react'
+import React from 'react';
 
-import { Table, CardBody, Card, Alert } from 'reactstrap'
+import { Table, CardBody, Card, Alert } from 'reactstrap';
 
-import DeleteModal from './components/DeleteModal'
-import FieldText from './components/fields/FieldText'
-import FieldDate from './components/fields/FieldDate'
-import FieldPrice from './components/fields/FieldPrice'
-import FieldNumber from './components/fields/FieldNumber'
-import FieldBadge from './components/fields/FieldBadge'
+import DeleteModal from './components/DeleteModal';
+import FieldText from './components/fields/FieldText';
+import FieldDate from './components/fields/FieldDate';
+import FieldPrice from './components/fields/FieldPrice';
+import FieldNumber from './components/fields/FieldNumber';
+import FieldBadge from './components/fields/FieldBadge';
 
-const ReactTableCompose = ({ nameEntities, deleteMethod, dataset, fields }) => {
+const ReactTableCompose = ({
+  idCollection,
+  nameEntities,
+  deleteMethod,
+  dataset,
+  fields,
+}) => {
   const switchField = (fieldType, index, data, options, field) => {
     switch (fieldType) {
       case 'text':
@@ -20,16 +26,16 @@ const ReactTableCompose = ({ nameEntities, deleteMethod, dataset, fields }) => {
             options={options}
             field={field}
           />
-        )
+        );
       case 'number':
         return (
           <FieldNumber
             index={index}
-            data={!isNaN(data)}
+            data={data}
             options={options}
             field={field}
           />
-        )
+        );
       case 'price':
         return (
           <FieldPrice
@@ -38,7 +44,7 @@ const ReactTableCompose = ({ nameEntities, deleteMethod, dataset, fields }) => {
             options={options}
             field={field}
           />
-        )
+        );
       case 'date':
         return (
           <FieldDate
@@ -47,7 +53,7 @@ const ReactTableCompose = ({ nameEntities, deleteMethod, dataset, fields }) => {
             options={options}
             field={field}
           />
-        )
+        );
       case 'badge':
         return (
           <FieldBadge
@@ -56,28 +62,25 @@ const ReactTableCompose = ({ nameEntities, deleteMethod, dataset, fields }) => {
             options={options}
             field={field}
           />
-        )
+        );
       default:
     }
-  }
+  };
   return (
     <Card style={{ width: '100%' }}>
       <CardBody>
-        <Table className='bg-light' striped hover responsive light>
+        <Table className='bg-light' striped hover responsive>
           <thead className='bg-light'>
             <tr>
-              {fields ? (
-                fields.map((field, i) => <th key={i}>{field.name}</th>)
-              ) : (
-                <Alert color='danger'>Aucun fields !</Alert>
-              )}
+              {fields &&
+                fields.map((field, i) => <th key={i}>{field.name}</th>)}
             </tr>
           </thead>
           <tbody>
             {dataset ? (
               dataset.map((data, row) => {
                 return (
-                  <tr key={data._id}>
+                  <tr key={(idCollection && data[idCollection]) || data.id}>
                     {fields &&
                       fields.map((field, i) => {
                         return switchField(
@@ -86,20 +89,21 @@ const ReactTableCompose = ({ nameEntities, deleteMethod, dataset, fields }) => {
                           data,
                           fields[i].options,
                           fields[i].field
-                        )
+                        );
                       })}
-
                     {deleteMethod && (
                       <td>
                         <DeleteModal
-                          dataId={data._id}
+                          dataId={
+                            (idCollection && data[idCollection]) || data.id
+                          }
                           deleteMethod={deleteMethod}
                           nameEntities={nameEntities}
                         />
                       </td>
                     )}
                   </tr>
-                )
+                );
               })
             ) : (
               <Alert>Aucun dataset !</Alert>
@@ -108,6 +112,6 @@ const ReactTableCompose = ({ nameEntities, deleteMethod, dataset, fields }) => {
         </Table>
       </CardBody>
     </Card>
-  )
-}
-export default ReactTableCompose
+  );
+};
+export default ReactTableCompose;
