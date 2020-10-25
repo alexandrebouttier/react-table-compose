@@ -1,20 +1,20 @@
-import React from 'react';
+import React from 'react'
 
-import { Table, CardBody, Card, Alert } from 'reactstrap';
+import { Table, CardBody, Card, Alert } from 'reactstrap'
 
-import DeleteModal from './components/DeleteModal';
-import FieldText from './components/fields/FieldText';
-import FieldDate from './components/fields/FieldDate';
-import FieldPrice from './components/fields/FieldPrice';
-import FieldNumber from './components/fields/FieldNumber';
-import FieldBadge from './components/fields/FieldBadge';
+import DeleteModal from './components/DeleteModal'
+import FieldText from './components/fields/FieldText'
+import FieldDate from './components/fields/FieldDate'
+import FieldPrice from './components/fields/FieldPrice'
+import FieldNumber from './components/fields/FieldNumber'
+import FieldBadge from './components/fields/FieldBadge'
 
 const ReactTableCompose = ({
   idCollection,
   nameEntities,
   deleteMethod,
   dataset,
-  fields,
+  fields
 }) => {
   const switchField = (fieldType, index, data, options, field) => {
     switch (fieldType) {
@@ -26,7 +26,7 @@ const ReactTableCompose = ({
             options={options}
             field={field}
           />
-        );
+        )
       case 'number':
         return (
           <FieldNumber
@@ -35,7 +35,7 @@ const ReactTableCompose = ({
             options={options}
             field={field}
           />
-        );
+        )
       case 'price':
         return (
           <FieldPrice
@@ -44,7 +44,7 @@ const ReactTableCompose = ({
             options={options}
             field={field}
           />
-        );
+        )
       case 'date':
         return (
           <FieldDate
@@ -53,7 +53,7 @@ const ReactTableCompose = ({
             options={options}
             field={field}
           />
-        );
+        )
       case 'badge':
         return (
           <FieldBadge
@@ -62,12 +62,12 @@ const ReactTableCompose = ({
             options={options}
             field={field}
           />
-        );
+        )
       default:
     }
-  };
+  }
   return (
-    <Card style={{ width: '100%' }}>
+    <Card>
       <CardBody>
         <Table className='bg-light' striped hover responsive>
           <thead className='bg-light'>
@@ -89,7 +89,7 @@ const ReactTableCompose = ({
                           data,
                           fields[i].options,
                           fields[i].field
-                        );
+                        )
                       })}
                     {deleteMethod && (
                       <td>
@@ -103,7 +103,7 @@ const ReactTableCompose = ({
                       </td>
                     )}
                   </tr>
-                );
+                )
               })
             ) : (
               <Alert>Aucun dataset !</Alert>
@@ -112,6 +112,6 @@ const ReactTableCompose = ({
         </Table>
       </CardBody>
     </Card>
-  );
-};
-export default ReactTableCompose;
+  )
+}
+export default ReactTableCompose
