@@ -69,7 +69,7 @@ const ReactTableCompose = ({
   return (
     <Card>
       <CardBody>
-        <Table className='bg-light' striped hover responsive>
+        <Table className='bg-light' striped responsive>
           <thead className='bg-light'>
             <tr>
               {fields &&
