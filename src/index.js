@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import { Table, CardBody, Card, Alert } from 'reactstrap'
 
@@ -78,17 +78,21 @@ const ReactTableCompose = ({
           </thead>
           <tbody>
             {dataset ? (
-              dataset.map((data, row) => {
+              dataset.map((data, rowId) => {
                 return (
-                  <tr key={(idCollection && data[idCollection]) || data.id}>
+                  <tr key={rowId}>
                     {fields &&
                       fields.map((field, i) => {
-                        return switchField(
-                          fields[i].type,
-                          i,
-                          data,
-                          fields[i].options,
-                          fields[i].field
+                        return (
+                          <Fragment key={i}>
+                            {switchField(
+                              fields[i].fieldType,
+                              i,
+                              data,
+                              fields[i].options,
+                              fields[i].field
+                            )}
+                          </Fragment>
                         )
                       })}
                     {deleteMethod && (
