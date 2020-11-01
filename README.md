@@ -11,7 +11,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/alexandrebouttier/react-table-compose">
-    <img src="https://banner2.cleanpng.com/20180817/oox/kisspng-react-computer-icons-scalable-vector-graphics-redu-5b777faedc42d8.1916296815345581269022.jpg" alt="Logo" width="80" height="80">
+    <img src="https://banner2.cleanpng.com/20180817/oox/kisspng-react-computer-icons-scalable-vector-graphics-redu-5b777faedc42d8.1916296815345581269022.jpg" alt="Logo" width="100" height="80">
   </a>
 
   <h3 align="center">React Table Compose</h3>
