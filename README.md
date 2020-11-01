@@ -69,7 +69,7 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
    <ReactTableCompose
         dataset={depositsMoney}
         nameEntities='dépot'
-        idCollection="depot_id"
+        idCollection="depot_id" //default id
         deleteMethod={deleteDepotMoney}
         // Si deleteMethod à une fonction de suppresion ,
         // une modal de suppression ainsi qu'un bouton sera automatiquement créer 
@@ -124,6 +124,7 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
         dataset={depositsMoney}
         // données 
         nameEntities='dépot'
+        idCollection="depot_id" // default id
         // nom de l'entité 
         fields={[
           {
