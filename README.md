@@ -29,11 +29,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/alexandrebouttier/react-table-compose">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">React Table Compose</h3>
 
   <p align="center">
     An awesome README template to jumpstart your projects!
@@ -136,7 +136,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/alexandrebouttier/react-table-composee/issues) for a list of proposed features (and known issues).
 
 
 
