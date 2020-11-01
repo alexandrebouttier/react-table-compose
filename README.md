@@ -253,4 +253,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [license-url]: https://github.com/alexandrebouttier/react-table-compose/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/alexandrebouttier/
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: screenshot.png
