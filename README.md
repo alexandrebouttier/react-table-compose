@@ -41,14 +41,8 @@
   * [Installation](#installation)
 * [Usage](#usage)
   * [Fields](#fields)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
-
-
-
+  * [Exemples](#exemples)  
+  
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -214,28 +208,93 @@ dark
 
 
 
-<!-- ROADMAP -->
-## Roadmap
 
-See the [open issues](https://github.com/alexandrebouttier/react-table-compose/issues) for a list of proposed features (and known issues).
+## Exemples
 
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+```javascript
 
 
+export const ordersTypes = {
+  market: 'Au marché',
+  limit: 'Limite',
+  take_profit_limit: 'Take profit limite',
+};
 
-<!-- LICENSE -->
-## License
+export const ordersStatus = {
+  closed: 'Fermer',
+  canceled: 'Annuler',
+  open: 'Ouvert',
+};
 
-Distributed under the MIT License. See `LICENSE` for more information.
+  <ReactTableCompose
+          dataset={ordersData}
+          nameEntities='order'
+          fields={[
+            {
+              name: 'Order id',
+              field: 'id',
+              type: 'number',
+            },
+            {
+              name: 'Date',
+              field: 'datetime',
+              type: 'date',
+              options: {
+                dateFormat: 'll',
+              },
+            },
+            {
+              name: 'Achat/Vente',
+              field: 'side',
+              type: 'badge',
+              options: {
+                badge: {
+                  success: 'buy',
+                  danger: 'sell',
+                },
+              },
+            },
+            {
+              name: 'Type',
+              field: 'type',
+              type: 'text',
+              options: {
+                transformValue: ordersTypes,
+              },
+            },
+            {
+              name: 'Symbol',
+              field: 'symbol',
+              type: 'text',
+              options: {
+                upperCase: true,
+              },
+            },
+            {
+              name: 'Quantité',
+              field: 'quantity',
+              type: 'number',
+            },
+            {
+              name: 'Prix',
+              field: 'price',
+              type: 'price',
+              options: {
+                currency: '$',
+                decimal: 2,
+              },
+            },
+            {
+              name: 'Statut',
+              field: 'status',
+              type: 'text',
+              options: {
+                transformValue: ordersStatus,
+              },
+            },
+          ]}
+        />
+```      
 
 
 
