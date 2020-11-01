@@ -98,10 +98,89 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+`import {ReactTableCompose} from 'react-table-compose';`
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
+```javascript
+
+   <ReactTableCompose
+        dataset={depositsMoney}
+        nameEntities='dépot'
+        idCollection="depot_id"
+        deleteMethod={deleteDepotMoney}
+        // Si deleteMethod à une fonction de suppresion ,
+        // une modal de suppression ainsi qu'un bouton sera automatiquement créer 
+        fields={[
+          {
+            name: 'Date',
+            field: 'date',
+            type: 'date',
+            options: {
+              dateFormat: 'll',
+            },
+          },
+          {
+            name: 'Crypto',
+            field: 'currency',
+            type: 'text',
+            options: {
+              upperCase: true,
+            },
+          },
+          {
+            name: 'Quantité',
+            field: 'quantity',
+            type: 'number',
+          },
+          {
+            name: 'Frais',
+            field: 'fee',
+            type: 'number',
+          },
+          {
+            name: 'Prix/Crypto',
+            field: 'priceCoin',
+            type: 'number',
+          },
+          {
+            name: 'Total',
+            field: 'priceTotal',
+            type: 'price',
+            options: {
+              currency: '€',
+              decimal: 2,
+            },
+          },
+        ]}
+      />
+```
+#### Basic parameters
+
+```javascript
+<ReactTableCompose
+        dataset={depositsMoney}
+        // données 
+        nameEntities='dépot'
+        // nom de l'entité 
+        fields={[
+          {
+            name: 'Crypto',
+            field: 'currency',
+            type: 'text',
+            options: {
+              upperCase: true,
+            },
+          },
+          {
+            name: 'Quantité',
+            field: 'quantity',
+            type: 'number',
+          },
+        // Champs à afficher
+        ]}
+      />
+/>
+```
 
 
 <!-- ROADMAP -->
