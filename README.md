@@ -40,7 +40,7 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
-  * [Types de fields](#fields)
+  * [Fields disponible](#fields)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
@@ -162,6 +162,55 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
       />
 />
 ```
+## Fields disponible
+
+#### FieldText
+|  options |type|
+| ------------- | ------------- |
+| upperCase  |  boolean |
+| upperFirst  |  boolean |
+| transformValue  |  array |
+
+#### FieldDate
+|  options |type|
+| ------------- | ------------- |
+| dateFormat  |  string ("LT","LTS","L","l","LL","ll","LLL","lll","LLLL","llll") |
+
+#### FieldNumber
+|  options |type|
+| ------------- | ------------- |
+| decimal  |  number ("1,2,3,4,5,6") |
+
+#### FieldPrice
+|  options |type|
+| ------------- | ------------- |
+| decimal  |  number ("1,2,3,4,5,6") |
+| currency  |  string ("symbol currency") |
+
+#### FieldBadge
+
+
+```javascript
+badge: {
+   success: 'buy', // color => value
+   danger: 'sell',
+   },
+```                
+|  options |type|
+| ------------- | ------------- |
+| badge  |  object |
+
+badges dispo :
+
+primary 
+secondary
+success 
+danger 
+warning
+info 
+light
+dark 
+
 
 
 <!-- ROADMAP -->
