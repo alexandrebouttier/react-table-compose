@@ -17,7 +17,7 @@
   <h3 align="center">React Table Compose</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+  Package React permettant de créer facilement des tableaux Bootstrap avec des jeux de données
     <br />
     <a href="https://github.com/alexandrebouttier/react-table-compose"><strong>Explore the docs »</strong></a>
     <br />
