@@ -40,7 +40,7 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
-  * [Fields disponible](#fields)
+  * [Fields](#fields)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
@@ -163,7 +163,7 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
 />
 ```
 <!-- Fields disponible -->
-## Fields disponible
+## Fields
 
 #### FieldText
 |  options |type|
