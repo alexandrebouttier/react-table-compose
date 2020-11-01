@@ -77,7 +77,7 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
           {
             name: 'Date',
             field: 'date',
-            type: 'date',
+            fieldType: 'date',
             options: {
               dateFormat: 'll',
             },
@@ -85,7 +85,7 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
           {
             name: 'Crypto',
             field: 'currency',
-            type: 'text',
+            fieldType: 'text',
             options: {
               upperCase: true,
             },
@@ -93,22 +93,22 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
           {
             name: 'Quantité',
             field: 'quantity',
-            type: 'number',
+            fieldType: 'number',
           },
           {
             name: 'Frais',
             field: 'fee',
-            type: 'number',
+            fieldType: 'number',
           },
           {
             name: 'Prix/Crypto',
             field: 'priceCoin',
-            type: 'number',
+            fieldType: 'number',
           },
           {
             name: 'Total',
             field: 'priceTotal',
-            type: 'price',
+            fieldType: 'price',
             options: {
               currency: '€',
               decimal: 2,
@@ -130,7 +130,7 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
           {
             name: 'Crypto',
             field: 'currency',
-            type: 'text',
+            fieldType: 'text',
             options: {
               upperCase: true,
             },
@@ -138,7 +138,7 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
           {
             name: 'Quantité',
             field: 'quantity',
-            type: 'number',
+            fieldType: 'number',
           },
         // Champs à afficher
         ]}
@@ -222,12 +222,12 @@ export const ordersStatus = {
             {
               name: 'Order id',
               field: 'id',
-              type: 'number',
+              fieldType: 'number',
             },
             {
               name: 'Date',
               field: 'datetime',
-              type: 'date',
+              fieldType: 'date',
               options: {
                 dateFormat: 'll',
               },
@@ -235,7 +235,7 @@ export const ordersStatus = {
             {
               name: 'Achat/Vente',
               field: 'side',
-              type: 'badge',
+              fieldType: 'badge',
               options: {
                 badge: {
                   success: 'buy',
@@ -246,7 +246,7 @@ export const ordersStatus = {
             {
               name: 'Type',
               field: 'type',
-              type: 'text',
+              fieldType: 'text',
               options: {
                 transformValue: ordersTypes,
               },
@@ -254,7 +254,7 @@ export const ordersStatus = {
             {
               name: 'Symbol',
               field: 'symbol',
-              type: 'text',
+              fieldType: 'text',
               options: {
                 upperCase: true,
               },
@@ -262,12 +262,12 @@ export const ordersStatus = {
             {
               name: 'Quantité',
               field: 'quantity',
-              type: 'number',
+              fieldType: 'number',
             },
             {
               name: 'Prix',
               field: 'price',
-              type: 'price',
+              fieldType: 'price',
               options: {
                 currency: '$',
                 decimal: 2,
@@ -276,7 +276,7 @@ export const ordersStatus = {
             {
               name: 'Statut',
               field: 'status',
-              type: 'text',
+              fieldType: 'text',
               options: {
                 transformValue: ordersStatus,
               },
