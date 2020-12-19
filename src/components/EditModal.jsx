@@ -16,8 +16,10 @@ const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
   const [showModalEdit, setShowModalEdit] = useState(false)
   const toggleModalEdit = () => setShowModalEdit(!showModalEdit)
 
-  const submitEdit = (depotId) => {
-    return editMethod(depotId).then((res) => toggleModalEdit())
+  const submitEdit = (e) => {
+    console.log('e', e)
+
+    return editMethod(e).then((res) => toggleModalEdit())
   }
 
   return (
@@ -39,9 +41,6 @@ const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
             {fields &&
               fields.map((field, index) => (
                 <FormGroup key={index}>
-                  {console.log('field', field)}
-                  {console.log('data', data)}
-                  {console.log('data[field]', data[field.field])}
                   <Label for={`${lowerCase(field.name)}${index}`}>
                     {field.name}
                   </Label>
