@@ -17,16 +17,14 @@ const EditModal = ({ fields, data, dataId, editMethod }) => {
 
   const submitEdit = (e) => {
     e.preventDefault()
-    console.log('submitEdit()')
 
     const data = new Map()
+
     fields.map((field, index) => {
       return data.set(field.field, e.target[field.field].value)
     })
 
-    console.log('data', data)
-
-    return editMethod(data)
+    return editMethod(dataId, Object.fromEntries(data))
       .then((res) => toggleModalEdit())
       .catch((err) => console.log('err', er))
   }
