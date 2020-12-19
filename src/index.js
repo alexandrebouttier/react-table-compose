@@ -13,8 +13,7 @@ import FieldPercentage from './components/fields/FieldPercentage'
 const ReactTableCompose = ({
   idCollection,
   nameEntities,
-  deleteModal,
-  editModal,
+  modalDelete,
   dataset,
   fields
 }) => {
@@ -81,48 +80,35 @@ const ReactTableCompose = ({
             </tr>
           </thead>
           <tbody>
-            {dataset ? (
-              dataset.map((data, rowId) => {
-                return (
-                  <tr key={rowId}>
-                    {fields &&
-                      fields.map((field, i) => {
-                        return (
-                          <Fragment key={i}>
-                            {switchField(
-                              fields[i].fieldType,
-                              i,
-                              data,
-                              fields[i].options,
-                              fields[i].field
-                            )}
-                          </Fragment>
-                        )
-                      })}
-                    {editModal && (
-                      <td>
-                        {() =>
-                          editModal(
-                            (idCollection && data[idCollection]) || data.id
+            {dataset
+              ? dataset.map((data, rowId) => {
+                  return (
+                    <tr key={rowId}>
+                      {fields &&
+                        fields.map((field, i) => {
+                          return (
+                            <Fragment key={i}>
+                              {switchField(
+                                fields[i].fieldType,
+                                i,
+                                data,
+                                fields[i].options,
+                                fields[i].field
+                              )}
+                            </Fragment>
                           )
-                        }
-                      </td>
-                    )}
-                    {deleteModal && (
-                      <td>
-                        {() =>
-                          deleteModal(
-                            (idCollection && data[idCollection]) || data.id
-                          )
-                        }
-                      </td>
-                    )}
-                  </tr>
-                )
-              })
-            ) : (
-              <Alert>Aucun dataset !</Alert>
-            )}
+                        })}
+                      {modalDelete && (
+                        <td>
+                          <modalDelete
+                            id={(idCollection && data[idCollection]) || data.id}
+                          />
+                        </td>
+                      )}
+                    </tr>
+                  )
+                })
+              : null}
           </tbody>
         </Table>
       </CardBody>
