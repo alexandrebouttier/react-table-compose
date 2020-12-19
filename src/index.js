@@ -13,7 +13,8 @@ import FieldPercentage from './components/fields/FieldPercentage'
 const ReactTableCompose = ({
   idCollection,
   nameEntities,
-  deleteMethod,
+  deleteModal,
+  editModal,
   dataset,
   fields
 }) => {
