@@ -10,7 +10,7 @@ const FieldText = ({ options, field, data, index }) => {
           return upperCase(data[field])
         case 'substring':
           return data[field].substring(
-            options.substring.maxLength || 3,
+            options.substring.maxLength,
             data[field].length
           )
         default:
