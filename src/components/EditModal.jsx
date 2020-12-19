@@ -23,13 +23,13 @@ const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
     <React.Fragment>
       <Button
         onClick={() => toggleModalEdit()}
-        className='mr-2 ml-2 btn-circle'
+        className='btn-circle'
         size='sm'
         id={dataId}
         data-target={'#modalEdit' + dataId}
         color='info'
       >
-        <i className='fas fa-trash-alt' />
+        <i className='fas fa-edit-alt' />
       </Button>
       <Modal isOpen={showModalEdit} toggle={toggleModalEdit}>
         <ModalHeader toggle={toggleModalEdit}>Modifier</ModalHeader>
