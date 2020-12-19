@@ -3,6 +3,8 @@ import React, { Fragment } from 'react'
 import { Table, CardBody, Card, Alert } from 'reactstrap'
 
 import DeleteModal from './components/DeleteModal'
+import EditModal from './components/EditModal'
+
 import FieldText from './components/fields/FieldText'
 import FieldDate from './components/fields/FieldDate'
 import FieldPrice from './components/fields/FieldPrice'
@@ -13,7 +15,8 @@ import FieldPercentage from './components/fields/FieldPercentage'
 const ReactTableCompose = ({
   idCollection,
   nameEntities,
-  modalDelete,
+  deleteMethod,
+  editMethod,
   dataset,
   fields
 }) => {
@@ -98,10 +101,27 @@ const ReactTableCompose = ({
                             </Fragment>
                           )
                         })}
-                      {modalDelete && (
+                      {editMethod && (
                         <td>
-                          <modalDelete
-                            id={(idCollection && data[idCollection]) || data.id}
+                          <EditModal
+                            fields={fields}
+                            data={data}
+                            dataId={
+                              (idCollection && data[idCollection]) || data.id
+                            }
+                            editMethod={editMethod}
+                            nameEntities={nameEntities}
+                          />
+                        </td>
+                      )}
+                      {deleteMethod && (
+                        <td>
+                          <DeleteModal
+                            dataId={
+                              (idCollection && data[idCollection]) || data.id
+                            }
+                            deleteMethod={deleteMethod}
+                            nameEntities={nameEntities}
                           />
                         </td>
                       )}
