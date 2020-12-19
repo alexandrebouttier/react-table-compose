@@ -155,6 +155,9 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
 | upperFirst  |  boolean |
 | transformValue  |  array |
 
+#### FieldPercentage
+|  options |null|
+
 #### FieldDate
 |  options |type|
 | ------------- | ------------- |
