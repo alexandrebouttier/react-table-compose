@@ -8,8 +8,8 @@ const FieldText = ({ options, field, data, index }) => {
           return upperFirst(data[field])
         case 'upperCase':
           return upperCase(data[field])
-        case 'substring':
-          return data[field].substring(0, options.substring.maxLength)
+        case 'maxLength':
+          return data[field].substring(0, options.maxLength)
         default:
       }
     }
