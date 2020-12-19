@@ -28,7 +28,7 @@ const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
       >
         <i className='fas fa-trash-alt' />
       </Button>
-      <Modal isOpen={modal} toggle={toggle}>
+      <Modal isOpen={showModalEdit} toggle={toggleModalEdit}>
         <ModalHeader toggle={toggle}>Modifier</ModalHeader>
         <ModalBody>
           <Form onSubmit={submitEdit}>
