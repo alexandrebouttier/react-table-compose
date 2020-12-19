@@ -24,7 +24,7 @@ const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
 
     fields.map((field, index) =>
       data.push({
-        [`${lowerCase(field.name)}`]: e.target[lowerCase(field.name)].value
+        [field.field]: e.target[lowerCase(field.name)].value
       })
     )
 
@@ -52,15 +52,15 @@ const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
             {fields &&
               fields.map((field, index) => (
                 <FormGroup key={index}>
-                  <Label for={`${lowerCase(field.name)}`}>{field.name}</Label>
+                  <Label for={field.field}>{field.name}</Label>
                   <Input
                     type={
                       (field && field.inputType && field.inputType) || 'text'
                     }
                     defaultValue={data[field.field]}
-                    name={`${lowerCase(field.name)}`}
+                    name={field.field}
                     required
-                    id={`${lowerCase(field.name)}`}
+                    id={field.field}
                   />
                 </FormGroup>
               ))}
