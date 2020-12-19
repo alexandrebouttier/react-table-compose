@@ -24,7 +24,7 @@ const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
 
     fields.map((field, index) =>
       data.push({
-        [`${lowerCase(field.name)}`]: 'test'
+        [`${lowerCase(field.name)}`]: e.target`${lowerCase(field.name)}`.value
       })
     )
 
