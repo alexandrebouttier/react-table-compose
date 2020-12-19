@@ -41,12 +41,14 @@ const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
                 <FormGroup key={index}>
                   {console.log('field', field)}
                   {console.log('data', data)}
+                  {console.log('data[field]', data[field])}
                   <Label for={`${lowerCase(field.name)}${index}`}>
                     {field.name}
                   </Label>
                   <Input
                     type='email'
                     value={data[field]}
+                    defaultValue={data[field]}
                     name={`${lowerCase(field.name)}${index}`}
                     required
                     id={`${lowerCase(field.name)}${index}`}
