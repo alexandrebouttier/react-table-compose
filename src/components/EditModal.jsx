@@ -17,7 +17,7 @@ const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
   const toggleModalEdit = () => setShowModalEdit(!showModalEdit)
 
   const submitEdit = (e) => {
-    e.preventdefault()
+    e.preventDefault()
     console.log('submitEdit()')
     console.log('e', e)
 
