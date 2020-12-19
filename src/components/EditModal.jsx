@@ -1,3 +1,4 @@
+import { lowerCase } from 'lodash'
 import React, { useState } from 'react'
 import {
   Button,
@@ -40,8 +41,15 @@ const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
                 <FormGroup key={index}>
                   {console.log('field', field)}
                   {console.log('data', data)}
-                  <Label for='email'>Email</Label>
-                  <Input type='email' name='email' required id='email' />
+                  <Label for={`${lowerCase(field.name)}${index}`}>
+                    {field.name}
+                  </Label>
+                  <Input
+                    type='email'
+                    name={`${lowerCase(field.name)}${index}`}
+                    required
+                    id={`${lowerCase(field.name)}${index}`}
+                  />
                 </FormGroup>
               ))}
 
