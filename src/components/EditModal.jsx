@@ -19,10 +19,9 @@ const EditModal = ({ fields, data, dataId, editMethod }) => {
     e.preventDefault()
     console.log('submitEdit()')
 
-    const data = fields.map((field, index) => {
-      return {
-        [field.field]: e.target[field.field].value
-      }
+    const data = new Map()
+    fields.map((field, index) => {
+      return data.set([field.field], e.target[field.field].value)
     })
 
     console.log('data', data)
