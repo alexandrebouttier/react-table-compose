@@ -26,7 +26,7 @@ const FieldText = ({ options, field, data, index }) => {
   return (
     <td key={`field-text${index}`}>
       {renderField(options)}
-      {(options.prefix && options.prefix) || ''}
+      {(options && options.prefix && options.prefix) || ''}
     </td>
   )
 }
