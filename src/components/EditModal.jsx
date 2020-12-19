@@ -17,6 +17,7 @@ const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
   const toggleModalEdit = () => setShowModalEdit(!showModalEdit)
 
   const submitEdit = (e) => {
+    console.log('submitEdit()')
     console.log('e', e)
 
     return editMethod(e).then((res) => toggleModalEdit())
