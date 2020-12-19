@@ -8,6 +8,7 @@ import FieldDate from './components/fields/FieldDate'
 import FieldPrice from './components/fields/FieldPrice'
 import FieldNumber from './components/fields/FieldNumber'
 import FieldBadge from './components/fields/FieldBadge'
+import FieldPercentage from './components/fields/FieldPercentage'
 
 const ReactTableCompose = ({
   idCollection,
@@ -27,6 +28,8 @@ const ReactTableCompose = ({
             field={field}
           />
         )
+      case 'percentage':
+        return <FieldPercentage index={index} data={data} field={field} />
       case 'number':
         return (
           <FieldNumber
