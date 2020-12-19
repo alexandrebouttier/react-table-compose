@@ -46,7 +46,9 @@ const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
                     {field.name}
                   </Label>
                   <Input
-                    type='email'
+                    type={
+                      (field && field.inputType && field.inputType) || 'text'
+                    }
                     defaultValue={data[field.field]}
                     name={`${lowerCase(field.name)}${index}`}
                     required
