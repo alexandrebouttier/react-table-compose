@@ -19,9 +19,18 @@ const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
   const submitEdit = (e) => {
     e.preventDefault()
     console.log('submitEdit()')
-    console.log('e', e)
 
-    return editMethod(e).then((res) => toggleModalEdit())
+    const data = []
+
+    fields.map((field, index) =>
+      data.push({
+        [`${lowerCase(field.name)}`]: 'test'
+      })
+    )
+
+    console.log('data', data)
+
+    //return editMethod(e).then((res) => toggleModalEdit())
   }
 
   return (
@@ -43,17 +52,15 @@ const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
             {fields &&
               fields.map((field, index) => (
                 <FormGroup key={index}>
-                  <Label for={`${lowerCase(field.name)}${index}`}>
-                    {field.name}
-                  </Label>
+                  <Label for={`${lowerCase(field.name)}`}>{field.name}</Label>
                   <Input
                     type={
                       (field && field.inputType && field.inputType) || 'text'
                     }
                     defaultValue={data[field.field]}
-                    name={`${lowerCase(field.name)}${index}`}
+                    name={`${lowerCase(field.name)}`}
                     required
-                    id={`${lowerCase(field.name)}${index}`}
+                    id={`${lowerCase(field.name)}`}
                   />
                 </FormGroup>
               ))}
