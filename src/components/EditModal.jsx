@@ -47,7 +47,7 @@ const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
                   </Label>
                   <Input
                     type='email'
-                    value={data[field.field]}
+                    defaultValue={data[field.field]}
                     name={`${lowerCase(field.name)}${index}`}
                     required
                     id={`${lowerCase(field.name)}${index}`}
