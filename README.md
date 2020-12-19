@@ -154,6 +154,8 @@ $ yarn add https://github.com/alexandrebouttier/react-table-compose.git
 | upperCase  |  boolean |
 | upperFirst  |  boolean |
 | transformValue  |  array |
+| prefix  |  string |
+| maxLength  |  number |
 
 #### FieldPercentage
 |  options |null|
