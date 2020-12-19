@@ -29,7 +29,7 @@ const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
         data-target={'#modalEdit' + dataId}
         color='info'
       >
-        <i className='fas fa-edit-alt' />
+        <i className='fas fa-edit' />
       </Button>
       <Modal isOpen={showModalEdit} toggle={toggleModalEdit}>
         <ModalHeader toggle={toggleModalEdit}>Modifier</ModalHeader>
