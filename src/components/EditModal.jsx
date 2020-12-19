@@ -1,4 +1,4 @@
-import { lowerCase } from 'lodash'
+import { flattenDeep } from 'lodash'
 import React, { useState } from 'react'
 import {
   Button,
@@ -28,7 +28,7 @@ const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
       })
     )
 
-    console.log('data', data)
+    console.log('data', flattenDeep(data))
 
     //return editMethod(e).then((res) => toggleModalEdit())
   }
