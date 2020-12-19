@@ -8,11 +8,10 @@ import {
   Label,
   Input,
   ModalHeader,
-  ModalBody,
-  ModalFooter
+  ModalBody
 } from 'reactstrap'
 
-const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
+const EditModal = ({ fields, data, dataId, editMethod }) => {
   const [showModalEdit, setShowModalEdit] = useState(false)
   const toggleModalEdit = () => setShowModalEdit(!showModalEdit)
 
@@ -20,20 +19,17 @@ const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
     e.preventDefault()
     console.log('submitEdit()')
 
-    const data = []
-
-    fields.map((field, index) =>
-      data.push({
+    const data = fields.map((field, index) => {
+      return {
         [field.field]: e.target[field.field].value
-      })
-    )
+      }
+    })
 
-    console.log('flatten', flatten(data))
-    console.log('flattenDeep', flattenDeep(data))
-    console.log('compact', compact(data))
-    console.log('concat', concat(data))
+    console.log('data', data)
 
-    return editMethod(data).then((res) => toggleModalEdit())
+    return editMethod(data)
+      .then((res) => toggleModalEdit())
+      .catch((err) => console.log('err', er))
   }
 
   return (
