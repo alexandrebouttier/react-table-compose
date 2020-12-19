@@ -21,7 +21,7 @@ const EditModal = ({ fields, data, dataId, editMethod }) => {
 
     const data = new Map()
     fields.map((field, index) => {
-      return data.set([field.field], e.target[field.field].value)
+      return data.set(field.field, e.target[field.field].value)
     })
 
     console.log('data', data)
