@@ -33,7 +33,7 @@ const EditModal = ({ fields, data, nameEntities, dataId, editMethod }) => {
     console.log('compact', compact(data))
     console.log('concat', concat(data))
 
-    //return editMethod(e).then((res) => toggleModalEdit())
+    return editMethod(data).then((res) => toggleModalEdit())
   }
 
   return (
