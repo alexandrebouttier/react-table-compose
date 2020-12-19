@@ -13,7 +13,8 @@ import FieldPercentage from './components/fields/FieldPercentage'
 const ReactTableCompose = ({
   idCollection,
   nameEntities,
-  deleteMethod,
+  deleteModal,
+  editModal,
   dataset,
   fields
 }) => {
@@ -98,17 +99,8 @@ const ReactTableCompose = ({
                           </Fragment>
                         )
                       })}
-                    {deleteMethod && (
-                      <td>
-                        <DeleteModal
-                          dataId={
-                            (idCollection && data[idCollection]) || data.id
-                          }
-                          deleteMethod={deleteMethod}
-                          nameEntities={nameEntities}
-                        />
-                      </td>
-                    )}
+                    {editModal && <td>{editModal}</td>}
+                    {deleteModal && <td>{deleteModal}</td>}
                   </tr>
                 )
               })
